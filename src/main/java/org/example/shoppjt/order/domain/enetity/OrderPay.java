@@ -1,4 +1,4 @@
 package org.example.shoppjt.order.domain.enetity;
 
-public class Pay {
+public class OrderPay {
 }
