@@ -15,7 +15,7 @@ public class Card extends BaseEntityTime {
     @Column(name = "card_id")
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
     private Member member;      //회원번호 다대일
 

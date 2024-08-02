@@ -9,18 +9,18 @@ import org.example.shoppjt.member.domain.enetity.Member;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "item_review")
 @Entity
-public class itemReview extends BaseEntityTime {
+public class ItemReview extends BaseEntityTime {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
     private Member member;//회원(다대일)
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "goods_id")
     private Goods goods;        //상품(다대일)
 

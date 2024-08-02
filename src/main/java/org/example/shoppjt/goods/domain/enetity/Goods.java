@@ -21,7 +21,7 @@ public class Goods extends BaseEntityTime {
     @Column(nullable = false)
     private int price;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "item_category_id")
     private ItemCategory itemCategory;  //카테고리(다대일)
     private String description;

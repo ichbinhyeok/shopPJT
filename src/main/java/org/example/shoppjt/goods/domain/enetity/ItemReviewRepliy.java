@@ -16,9 +16,9 @@ public class ItemReviewRepliy extends BaseEntityTime {
     @Column(name = "item_review_repliy_id")
     private Long Id;
 
-//    @ManyToOne
-//    @JoinColumn(name = "item_review_id")
-//    private ItemReview itemReview;          //상품리뷰(다대일)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "item_review_id")
+    private ItemReview itemReview;          //상품리뷰(다대일)
 
     private String comment;                 //리뷰댓글내용
 }

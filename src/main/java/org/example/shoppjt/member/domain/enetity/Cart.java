@@ -16,7 +16,7 @@ public class Cart extends BaseEntityTime {
     @Column(name = "cart_id")
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "goods_id")
     private Goods goods;        //상품번호(다대일)
 
