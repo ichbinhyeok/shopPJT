@@ -1,4 +1,4 @@
-package org.example.shoppjt.global.config;
+package org.example.shoppjt.global.common;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
